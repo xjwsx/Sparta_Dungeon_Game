@@ -173,7 +173,6 @@ namespace Sparta_Dungeon_Game
                 }
                 else
                 {
-                    
                     DisplayEquipment();
                     Console.WriteLine("잘못된 입력입니다.");
                 }

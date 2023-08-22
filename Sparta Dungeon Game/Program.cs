@@ -23,17 +23,17 @@ namespace Sparta_Dungeon_Game
         public string Name { get; set; }
         public string Job { get; set; }
         public int Level { get; set; }
-        public int Ate { get; set; }
+        public int Atk { get; set; }
         public int Def { get; set; }
         public int Hp { get; set; }
         public int Gold { get; set; }
 
-        public Character(string name, string job, int level, int ate, int def, int hp, int gold)
+        public Character(string name, string job, int level, int atk, int def, int hp, int gold)
         {
             Name = name;
             Job = job;
             Level = level;
-            Ate = ate;
+            Atk = atk;
             Def = def;
             Hp = hp;
             Gold = gold;
@@ -70,16 +70,26 @@ namespace Sparta_Dungeon_Game
         }
         public static void DisplayMyInfo()
         {
+            int totalAtk = player.Atk;
+            int totalDef = player.Def;
             Console.Clear();
-
+            foreach (Item eqItem in itemList)
+            {
+                if (eqItem.Eqbool)
+                {
+                    totalAtk += item.Atk;
+                    totalDef += item.Def;
+                }
+            }
             Console.WriteLine("상태 보기");
             Console.WriteLine("캐릭터의 정보가 표시됩니다.");
             Console.WriteLine();
-            Console.WriteLine("{0} ({1})", player.Name,player.Job);
-            Console.WriteLine("공격력 : {0}",player.Ate);
-            Console.WriteLine("방어력 : {0}", player.Def);
-            Console.WriteLine("체 력 : {0}",player.Hp);
-            Console.WriteLine("Gold : {0}", player.Gold);
+            Console.WriteLine($"Lv. {player.Level}");
+            Console.WriteLine($"{player.Name} ({player.Job})");
+            Console.WriteLine($"공격력 : {player.Atk} (+{totalAtk - player.Atk})");
+            Console.WriteLine($"방어력 : {player.Def} (+{totalDef - player.Def})");
+            Console.WriteLine($"체  력 : {player.Hp}");
+            Console.WriteLine($"Gold   : {player.Gold}");
             Console.WriteLine();
             Console.WriteLine("0. 나가기");
             Console.WriteLine();
@@ -155,32 +165,34 @@ namespace Sparta_Dungeon_Game
             Console.WriteLine("원하시는 행동을 입력해주세요.");
             Console.WriteLine(">>");
             
-            int input = int.Parse(Console.ReadLine()) -1;
-
-            if(input >= 0)
+            while (true)
             {
-                if (itemList.Count > input)
+                int input = int.Parse(Console.ReadLine()) - 1;
+
+                if (input >= 0)
                 {
-                    if (itemList[input].Eqbool == false)
+                    if (itemList.Count > input)
                     {
-                        itemList[input].Eqbool = true;
+                        if (itemList[input].Eqbool == false)
+                        {
+                            itemList[input].Eqbool = true;
+                            player.Def += itemList[input].Def;
+                            player.Atk += itemList[input].Atk;
+                        }
+                        else
+                        {
+                            itemList[input].Eqbool = false;
+                            player.Def -= itemList[input].Def;
+                            player.Atk -= itemList[input].Atk;
+                        }
+                        DisplayEquipment();
                     }
-                    else
-                    {
-                        itemList[input].Eqbool = false;
-                    }
-                    DisplayInvantory();
                 }
                 else
                 {
-                    DisplayEquipment();
-                    Console.WriteLine("잘못된 입력입니다.");
+                    DisplayInvantory();
                 }
-                
-            }
-            else if(input == -1)
-            {
-                DisplayInvantory();
+                Console.WriteLine("잘못된 입력입니다.");
             }
         }
         public static void GameDataSetting()
@@ -190,6 +202,9 @@ namespace Sparta_Dungeon_Game
             itemList.Add(item);
             item = new Item("낡은 검", "쉽게 볼 수 있는 낡은 검 입니다.", 0, 2);
             itemList.Add(item);
+            item = new Item("청동 검", "날카로운 검 입니다.", 0, 5);
+            itemList.Add(item);
+
         }
         public static int CheckValidInput(int min, int max)
         {

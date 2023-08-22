@@ -5,6 +5,7 @@ namespace Sparta_Dungeon_Game
 {
     public class Item
     {
+        public bool Eqbool { get; set; }
         public string Name { get; set;}
         public string Characteristic { get; set; }
         public int Def { get; set; }
@@ -43,6 +44,7 @@ namespace Sparta_Dungeon_Game
         private static Character player;
         private static Item item;
         static List<Item> itemList = new List<Item>();
+        
 
         public static void DisplayGameInfo()
         {
@@ -100,8 +102,14 @@ namespace Sparta_Dungeon_Game
             Console.WriteLine("보유 중인 아이템을 관리할 수 있습니다.");
             Console.WriteLine();
             Console.WriteLine("[아이템 목록]");
-            Console.WriteLine("- {0}        | 방어력 +{1} | {2}", itemList[0].Name, itemList[0].Def, itemList[0].Characteristic);
-            Console.WriteLine("- {0}         | 공격력 +{1} | {2}", itemList[1].Name, itemList[1].Atk, itemList[1].Characteristic);
+            foreach (Item eqItem in itemList)
+            {
+                string CompleteEq = eqItem.Eqbool ? "E" : " ";
+                Console.Write($"-  {CompleteEq}  장비 이름:{eqItem.Name}   ㅣ");
+                Console.Write($"장비 공격력:{eqItem.Atk}   ㅣ");
+                Console.Write($"장비 방어력:{eqItem.Def}   ㅣ");
+                Console.WriteLine($"장비 설명:{eqItem.Characteristic}   ㅣ");
+            }
             Console.WriteLine();
             Console.WriteLine("1. 장착 관리");
             Console.WriteLine("0. 나가기");
@@ -116,10 +124,64 @@ namespace Sparta_Dungeon_Game
                     DisplayGameInfo();
                     break;
                 case 1:
-                    DisplayMyInfo();
+                    DisplayEquipment();
                     break;
             }
 
+        }
+        public static void DisplayEquipment()
+        {
+            int itemCount = 1;
+            Console.Clear();
+
+            Console.WriteLine("인벤토리 - 장착 관리");
+            Console.WriteLine("보유 중인 아이템을 관리할 수 있습니다.");
+            Console.WriteLine();
+            Console.WriteLine("[아이템 목록]");
+            foreach (Item eqItem in itemList)
+            {
+                string CompleteEq = eqItem.Eqbool ? "E" : " ";
+                Console.Write($"- {itemCount} {CompleteEq}  장비 이름:{eqItem.Name}   ㅣ"); 
+                Console.Write($"장비 공격력:{eqItem.Atk}   ㅣ"); 
+                Console.Write($"장비 방어력:{eqItem.Def}   ㅣ"); 
+                Console.WriteLine($"장비 설명:{eqItem.Characteristic}   ㅣ");
+                itemCount++;
+            }
+            Console.WriteLine();
+            Console.WriteLine("0. 나가기");
+            Console.WriteLine();
+            Console.WriteLine("장착할장비 번호 입력해주세요");
+            Console.WriteLine();
+            Console.WriteLine("원하시는 행동을 입력해주세요.");
+            Console.WriteLine(">>");
+            
+            int input = int.Parse(Console.ReadLine()) -1;
+
+            if(input >= 0)
+            {
+                if (itemList.Count > input)
+                {
+                    if (itemList[input].Eqbool == false)
+                    {
+                        itemList[input].Eqbool = true;
+                    }
+                    else
+                    {
+                        itemList[input].Eqbool = false;
+                    }
+                    DisplayInvantory();
+                }
+                else
+                {
+                    DisplayEquipment();
+                    Console.WriteLine("잘못된 입력입니다.");
+                }
+                
+            }
+            else if(input == -1)
+            {
+                DisplayInvantory();
+            }
         }
         public static void GameDataSetting()
         {

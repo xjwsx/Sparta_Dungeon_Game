@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\J\\Desktop\\Coding\\Personal assignment\\Sparta Dungeon Game\\Sparta Dungeon Game\\Sparta Dungeon Game.csproj": {}
+    "C:\\Users\\J\\Desktop\\Sparta Dungeon Game\\Sparta Dungeon Game\\Sparta Dungeon Game.csproj": {}
   },
   "projects": {
-    "C:\\Users\\J\\Desktop\\Coding\\Personal assignment\\Sparta Dungeon Game\\Sparta Dungeon Game\\Sparta Dungeon Game.csproj": {
+    "C:\\Users\\J\\Desktop\\Sparta Dungeon Game\\Sparta Dungeon Game\\Sparta Dungeon Game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\J\\Desktop\\Coding\\Personal assignment\\Sparta Dungeon Game\\Sparta Dungeon Game\\Sparta Dungeon Game.csproj",
+        "projectUniqueName": "C:\\Users\\J\\Desktop\\Sparta Dungeon Game\\Sparta Dungeon Game\\Sparta Dungeon Game.csproj",
         "projectName": "Sparta Dungeon Game",
-        "projectPath": "C:\\Users\\J\\Desktop\\Coding\\Personal assignment\\Sparta Dungeon Game\\Sparta Dungeon Game\\Sparta Dungeon Game.csproj",
+        "projectPath": "C:\\Users\\J\\Desktop\\Sparta Dungeon Game\\Sparta Dungeon Game\\Sparta Dungeon Game.csproj",
         "packagesPath": "C:\\Users\\J\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\J\\Desktop\\Coding\\Personal assignment\\Sparta Dungeon Game\\Sparta Dungeon Game\\obj\\",
+        "outputPath": "C:\\Users\\J\\Desktop\\Sparta Dungeon Game\\Sparta Dungeon Game\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

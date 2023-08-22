@@ -13,3 +13,18 @@ C:\Users\J\Desktop\Coding\Personal assignment\Sparta Dungeon Game\Sparta Dungeon
 C:\Users\J\Desktop\Coding\Personal assignment\Sparta Dungeon Game\Sparta Dungeon Game\obj\Debug\net6.0\Sparta Dungeon Game.pdb
 C:\Users\J\Desktop\Coding\Personal assignment\Sparta Dungeon Game\Sparta Dungeon Game\obj\Debug\net6.0\Sparta Dungeon Game.genruntimeconfig.cache
 C:\Users\J\Desktop\Coding\Personal assignment\Sparta Dungeon Game\Sparta Dungeon Game\obj\Debug\net6.0\ref\Sparta Dungeon Game.dll
+C:\Users\J\Desktop\Sparta Dungeon Game\Sparta Dungeon Game\bin\Debug\net6.0\Sparta Dungeon Game.exe
+C:\Users\J\Desktop\Sparta Dungeon Game\Sparta Dungeon Game\bin\Debug\net6.0\Sparta Dungeon Game.deps.json
+C:\Users\J\Desktop\Sparta Dungeon Game\Sparta Dungeon Game\bin\Debug\net6.0\Sparta Dungeon Game.runtimeconfig.json
+C:\Users\J\Desktop\Sparta Dungeon Game\Sparta Dungeon Game\bin\Debug\net6.0\Sparta Dungeon Game.dll
+C:\Users\J\Desktop\Sparta Dungeon Game\Sparta Dungeon Game\bin\Debug\net6.0\Sparta Dungeon Game.pdb
+C:\Users\J\Desktop\Sparta Dungeon Game\Sparta Dungeon Game\obj\Debug\net6.0\Sparta Dungeon Game.csproj.AssemblyReference.cache
+C:\Users\J\Desktop\Sparta Dungeon Game\Sparta Dungeon Game\obj\Debug\net6.0\Sparta Dungeon Game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\J\Desktop\Sparta Dungeon Game\Sparta Dungeon Game\obj\Debug\net6.0\Sparta Dungeon Game.AssemblyInfoInputs.cache
+C:\Users\J\Desktop\Sparta Dungeon Game\Sparta Dungeon Game\obj\Debug\net6.0\Sparta Dungeon Game.AssemblyInfo.cs
+C:\Users\J\Desktop\Sparta Dungeon Game\Sparta Dungeon Game\obj\Debug\net6.0\Sparta Dungeon Game.csproj.CoreCompileInputs.cache
+C:\Users\J\Desktop\Sparta Dungeon Game\Sparta Dungeon Game\obj\Debug\net6.0\Sparta Dungeon Game.dll
+C:\Users\J\Desktop\Sparta Dungeon Game\Sparta Dungeon Game\obj\Debug\net6.0\refint\Sparta Dungeon Game.dll
+C:\Users\J\Desktop\Sparta Dungeon Game\Sparta Dungeon Game\obj\Debug\net6.0\Sparta Dungeon Game.pdb
+C:\Users\J\Desktop\Sparta Dungeon Game\Sparta Dungeon Game\obj\Debug\net6.0\Sparta Dungeon Game.genruntimeconfig.cache
+C:\Users\J\Desktop\Sparta Dungeon Game\Sparta Dungeon Game\obj\Debug\net6.0\ref\Sparta Dungeon Game.dll

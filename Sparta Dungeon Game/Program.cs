@@ -77,8 +77,8 @@ namespace Sparta_Dungeon_Game
             {
                 if (eqItem.Eqbool)
                 {
-                    totalAtk += item.Atk;
-                    totalDef += item.Def;
+                    totalAtk += eqItem.Atk;
+                    totalDef += eqItem.Def;
                 }
             }
             Console.WriteLine("상태 보기");
@@ -114,8 +114,8 @@ namespace Sparta_Dungeon_Game
             Console.WriteLine("[아이템 목록]");
             foreach (Item eqItem in itemList)
             {
-                string CompleteEq = eqItem.Eqbool ? "E" : " ";
-                Console.Write($"-  {CompleteEq}  장비 이름:{eqItem.Name}   ㅣ");
+                string CompleteE = eqItem.Eqbool ? "E" : " ";
+                Console.Write($"-  {CompleteE}  장비 이름:{eqItem.Name}   ㅣ");
                 Console.Write($"장비 공격력:{eqItem.Atk}   ㅣ");
                 Console.Write($"장비 방어력:{eqItem.Def}   ㅣ");
                 Console.WriteLine($"장비 설명:{eqItem.Characteristic}   ㅣ");
@@ -150,8 +150,8 @@ namespace Sparta_Dungeon_Game
             Console.WriteLine("[아이템 목록]");
             foreach (Item eqItem in itemList)
             {
-                string CompleteEq = eqItem.Eqbool ? "E" : " ";
-                Console.Write($"- {itemCount} {CompleteEq}  장비 이름:{eqItem.Name}   ㅣ"); 
+                string CompleteE = eqItem.Eqbool ? "E" : " ";
+                Console.Write($"- {itemCount} {CompleteE}  장비 이름:{eqItem.Name}   ㅣ"); 
                 Console.Write($"장비 공격력:{eqItem.Atk}   ㅣ"); 
                 Console.Write($"장비 방어력:{eqItem.Def}   ㅣ"); 
                 Console.WriteLine($"장비 설명:{eqItem.Characteristic}   ㅣ");
